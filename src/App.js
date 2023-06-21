@@ -1,155 +1,151 @@
 
 import './App.css';
 import Card from "./Card";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+function App () {
+  let PricingCard = [
+          {
+            type:"FREE",
+            price:"$0",
+            period:"/month",
 
-function App() {
-  let details = [
-    {
-      type:"FREE",
-      price:"$0",
-      period:"/month",
+            featuer:[
+              {
+                title :"Single Users",
+                enabled : true,
+                hihglight: true,
+              },
+              {
+                title :"5GB Storage",
+                enabled : true,
+              },
+              {
+                title :"Unlimited Public Projects",
+                enabled : true,
+              },
+              {
+                title :"Community Access",
+                enabled : true,
+              },
+              {
+                title :"Unlimited Private Projects",
+                enabled : false,
+              },
+              {
+                title :"Dedicated Phone Support",
+                enabled : false,
+              },
+              {
+                title :"Free Subdomain",
+                enabled : false,
+              },
+              {
+                title :"Monthly Status Reports",
+                enabled : false,
+              },
+            ]
+          },
+          {
+            type:"PLUS",
+            price:"$9",
+            period:"/month",
 
-      features:[
-        {
-          name:" Single User",
-          isEnabled: true,
-        },
-        {
-          name: "5GB Storage",
-          isEnabled: true,
-        },
-        {
-          name: "Unlimited Public Project",
-          isEnabled: true,
-        },
-        {
-          name: "Community Access",
-          isEnabled: true,
-        },
-        {
-          name: "Unlimited Private Projects",
-          isEnabled: false,
-        },
-        {
-          name: "Dedicated Phone Support",
-          isEnabled: false,
-        },
-        {
-          name: "Free Subdomain",
-          isEnabled: false,
-        },
-        {
-          name: "Monthly Status Reports",
-          isEnabled: false,
-        },
-       
-      ]
-    
-    },
-    {
-      type:"PLUS",
-      price:"$9",
-      period:"/month",
+            featuer:[
+              {
+                title :"5 Users",
+                enabled : true,
+                hihglight: true,
+              },
+              {
+                title :"50GB Storage",
+                enabled : true,
+              },
+              {
+                title :"Unlimited Public Projects",
+                enabled : true,
+              },
+              {
+                title :"Community Access",
+                enabled : true,
+              },
+              {
+                title :"Unlimited Private Projects",
+                enabled : true,
+              },
+              {
+                title :"Dedicated Phone Support",
+                enabled : true,
+              },
+              {
+                title :"Free Subdomain",
+                enabled : true,
+              },
+              {
+                title :"Monthly Status Reports",
+                enabled : false,
+              },
+            ]
+          },
+          {
+            type:"PRO",
+            price:"$49",
+            period:"/month",
 
-      features:[
-        {
-          name: "5 Users",
-          isEnabled: true, 
-        },
-        {
-          name: "50GB Storage",
-          isEnabled: true, 
-        },
-        {
-          name: "Unlimited Public Projects",
-          isEnabled: true, 
-        },
-        {
-          name: "Community Access",
-          isEnabled: true, 
-        },
-        {
-          name: "Unlimited Private Projects",
-          isEnabled: true, 
-        },
-        {
-          name: "Dedicated Phone Support",
-          isEnabled: true, 
-        },
-        {
-          name: "Free Subdomain",
-          isEnabled: true, 
-        },
-        {
-          name: "Monthly Status Reports",
-          isEnabled: false, 
-        },
-       
-      ]
-    },
-    {
-      type:"PRO",
-      price:"$49",
-      period:"/month",
-
-      features:[
-        {
-          name: "5 Users",
-          isEnabled: true, 
-        },
-        {
-          name: "50GB Storage",
-          isEnabled: true, 
-        },
-        {
-          name: "Unlimited Public Projects",
-          isEnabled: true, 
-        },
-        {
-          name: "Community Access",
-          isEnabled: true, 
-        },
-        {
-          name: "Unlimited Private Projects",
-          isEnabled: true, 
-        },
-        {
-          name: "Dedicated Phone Support",
-          isEnabled: true, 
-        },
-        {
-          name: "Free Subdomain",
-          isEnabled: true, 
-        },
-        {
-          name: "Monthly Status Reports",
-          isEnabled: true, 
-        },
-       
-      ]
-    },
-  
+            featuer:[
+              {
+                title :"Unlimited Users",
+                enabled : true,
+                hihglight: true,
+              },
+              {
+                title :"150GB Storage",
+                enabled : true,
+              },
+              {
+                title :"Unlimited Public Projects",
+                enabled : true,
+              },
+              {
+                title :"Community Access",
+                enabled : true,
+              },
+              {
+                title :"Unlimited Private Projects",
+                enabled : true,
+              },
+              {
+                title :"Dedicated Phone Support",
+                enabled : true,
+              },
+              {
+                title :"Unlimited Free Subdomain",
+                enabled : true,
+                hihglight: true,
+              },
+              {
+                title :"Monthly Status Reports",
+                enabled : true,
+              },
+            ]
+          }
   ]
-  
- return(
+
+
+return (
   <>
-  <section class="pricing py-5">
-    <div class="container">
-      <div class="row">
-        {
-          details.map((card) => {
-            return <Card data={card}></Card>
-          })
-        }
+  <div className="App">
+    <section class="pricing py-5">
+      <div class="container">
+        <div class="row">
+          {
+            PricingCard.map((card) =>{
+              return <Card card={card}></Card>
+            })
+          }
+        </div>
       </div>
-    </div>
-
-  </section>
+    </section>
+  </div>
   </>
- )
-}
-
-
-
+)
+        }
 export default App;
